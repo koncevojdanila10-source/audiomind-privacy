@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AudioMind Privacy Policy</title>
+<meta name="description" content="What the AudioMind extension touches, what leaves your computer, and what we keep.">
+<style>
+  :root {
+    --paper:  #FBFBFC;
+    --raised: #F3F4F7;
+    --ink:    #16181D;
+    --muted:  #5C626E;
+    --rule:   #E3E5EA;
+    --accent: #2F6F6B;
+
+    --serif: ui-serif, Georgia, "Iowan Old Style", "Times New Roman", serif;
+    --sans:  ui-sans-serif, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:  #14161A;
+      --raised: #1C1F25;
+      --ink:    #E8EAEE;
+      --muted:  #99A0AC;
+      --rule:   #282C34;
+      --accent: #6FB3AD;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper:  #14161A;
+    --raised: #1C1F25;
+    --ink:    #E8EAEE;
+    --muted:  #99A0AC;
+    --rule:   #282C34;
+    --accent: #6FB3AD;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: clamp(2.5rem, 7vw, 5rem) clamp(1.25rem, 5vw, 2rem) 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.75rem;
+  }
+
+  /* ── masthead ── */
+
+  header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding-bottom: 1.75rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .eyebrow {
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(1.9rem, 5.5vw, 2.5rem);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+  }
+
+  .updated {
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+
+  .lede {
+    margin: 0.5rem 0 0;
+    font-size: 1.06rem;
+    color: var(--muted);
+    text-wrap: pretty;
+  }
+
+  /* ── sections ── */
+
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 1.22rem;
+    font-weight: 600;
+    letter-spacing: -0.008em;
+    text-wrap: balance;
+  }
+
+  p { margin: 0; text-wrap: pretty; }
+
+  .term { font-weight: 600; }
+
+  a {
+    color: var(--accent);
+    text-underline-offset: 0.18em;
+    text-decoration-thickness: 1px;
+  }
+
+  a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* ── tables ── */
+
+  .table-scroll {
+    overflow-x: auto;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--sans);
+    font-size: 0.9rem;
+  }
+
+  th {
+    padding: 0.7rem 1rem 0.7rem 0;
+    text-align: left;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    white-space: nowrap;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  td {
+    padding: 0.7rem 1rem 0.7rem 0;
+    vertical-align: top;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  tr:last-child td { border-bottom: 0; }
+
+  th:last-child, td:last-child { padding-right: 0; }
+
+  code {
+    font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+    font-size: 0.86em;
+    padding: 0.1em 0.35em;
+    border-radius: 3px;
+    background: var(--raised);
+  }
+
+  /* ── the "never" list: rules, because this is the part people scan for ── */
+
+  .never {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .never li {
+    padding: 0.7rem 0 0.7rem 1.5rem;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .never li:first-child { border-top: 1px solid var(--rule); }
+
+  .never li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 1.42em;
+    width: 0.7rem;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  footer {
+    padding-top: 1.75rem;
+    border-top: 1px solid var(--rule);
+    font-family: var(--sans);
+    font-size: 0.88rem;
+    color: var(--muted);
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+</style>
+</head>
+<body>
+<main class="page">
+
+  <header>
+    <div class="eyebrow">AudioMind</div>
+    <h1>Privacy Policy</h1>
+    <div class="updated">Last updated 16 August 2026</div>
+    <p class="lede">
+      AudioMind turns a lecture or webinar you are watching into a written summary.
+      This page explains exactly what the extension touches, what leaves your
+      computer, and what we keep.
+    </p>
+  </header>
+
+  <section>
+    <h2>What the extension processes</h2>
+    <p>
+      <span class="term">Tab audio.</span> When you press Start, AudioMind captures
+      the audio of the tab you selected. Capture stops when you press Stop, and
+      never runs on its own.
+    </p>
+    <p>
+      <span class="term">Screenshots.</span> Only the frames you capture yourself,
+      by pressing the button. Nothing is captured automatically, and no frame is
+      taken while recording is off.
+    </p>
+    <p>
+      <span class="term">Files you add.</span> In the merge window you may add your
+      own notebooks, slides, PDFs or documents. They are read in your browser to
+      build the summary.
+    </p>
+  </section>
+
+  <section>
+    <h2>What leaves your computer</h2>
+    <p>
+      To produce a transcript and a summary, the following is sent to our
+      processing service and from there to our AI providers:
+    </p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">What</th>
+            <th scope="col">Where it goes</th>
+            <th scope="col">Why</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Audio, in short chunks</td>
+            <td>Groq, OpenAI</td>
+            <td>speech to text</td>
+          </tr>
+          <tr>
+            <td>Screenshots you captured</td>
+            <td>OpenAI</td>
+            <td>reading slides and code</td>
+          </tr>
+          <tr>
+            <td>Text of files you added</td>
+            <td>OpenAI</td>
+            <td>building the summary</td>
+          </tr>
+          <tr>
+            <td>Your license key</td>
+            <td>our server</td>
+            <td>checking the subscription and usage</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      Our providers process this data to return a result and, under their API
+      terms, do not use it to train their models.
+    </p>
+  </section>
+
+  <section>
+    <h2>What we store</h2>
+    <p>
+      <span class="term">On your computer:</span> the transcript, screenshots and
+      settings of the current recording, so that an accidentally closed tab does
+      not lose your work. This data stays in the browser and can be removed at any
+      time by clearing the extension's storage or uninstalling it.
+    </p>
+    <p>
+      <span class="term">On our server:</span> your license key, its plan, and
+      counters of how much you used this month — minutes transcribed and requests
+      made. Counters are deleted automatically after 40 days.
+    </p>
+    <p>
+      <span class="term">We do not store</span> your audio, your screenshots, your
+      files, your transcripts or your summaries. They pass through the service and
+      are not written to disk.
+    </p>
+  </section>
+
+  <section>
+    <h2>What we never do</h2>
+    <ul class="never">
+      <li>We do not sell or share your data with anyone beyond the providers listed above.</li>
+      <li>We do not use your recordings for advertising or profiling.</li>
+      <li>We do not record without an explicit press of Start.</li>
+      <li>We do not take screenshots on our own.</li>
+      <li>We do not read tabs other than the one you are recording.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Finished summaries</h2>
+    <p>
+      The <code>.md</code> and <code>.html</code> files are saved by your browser
+      to your Downloads folder. They belong to you. We have no access to them and
+      no copy of them.
+    </p>
+  </section>
+
+  <section>
+    <h2>Permissions and why they are needed</h2>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Permission</th>
+            <th scope="col">Why</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>tabCapture</code></td>
+            <td>to capture audio of the tab you chose</td>
+          </tr>
+          <tr>
+            <td><code>activeTab</code>, <code>scripting</code></td>
+            <td>to show the capture button on the page</td>
+          </tr>
+          <tr>
+            <td><code>downloads</code></td>
+            <td>to save the summary to your computer</td>
+          </tr>
+          <tr>
+            <td><code>storage</code>, <code>unlimitedStorage</code></td>
+            <td>to keep the recording safe if a tab closes</td>
+          </tr>
+          <tr>
+            <td><code>offscreen</code></td>
+            <td>to keep recording while the popup is closed</td>
+          </tr>
+          <tr>
+            <td>access to our server</td>
+            <td>to transcribe and summarise</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Children</h2>
+    <p>AudioMind is not intended for children under 13.</p>
+  </section>
+
+  <section>
+    <h2>Deleting your data</h2>
+    <p>
+      Uninstalling the extension removes everything kept on your computer. To
+      delete your license and usage counters from our server, write to the address
+      below and it will be done within 7 days.
+    </p>
+  </section>
+
+  <section>
+    <h2>Changes</h2>
+    <p>
+      If this policy changes, the date at the top changes with it, and material
+      changes will be announced in the extension.
+    </p>
+  </section>
+
+  <footer>
+    <div>Contact</div>
+    <div><a href="mailto:koncevojdanila10@gmail.com">koncevojdanila10@gmail.com</a></div>
+  </footer>
+
+</main>
+</body>
+</html>
